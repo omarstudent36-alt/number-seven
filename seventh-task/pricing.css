@@ -540,6 +540,8 @@ section .container .left{
     width: 100%;
 }
 
+
+
 main .container{
   padding: 80px;
 }
@@ -607,6 +609,13 @@ left: 100px;
     height: 6px;
     left: 110px;
 }
+
+    .beta .container .content{
+
+width: 90%;
+
+     }
+
  footer .container {
         flex-direction: column;
         align-items: center;

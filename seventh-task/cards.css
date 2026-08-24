@@ -345,8 +345,14 @@ footer .container {
      }
      .beta .container {
         flex-direction: column;
-     }
      
+     }
+     .beta .container .content{
+
+width: 90%;
+
+     }
+
      .beta .container .content .line{
     width: 17%;
     height: 6px;
