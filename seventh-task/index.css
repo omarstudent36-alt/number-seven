@@ -18,38 +18,32 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px 30px;
 }
-
-
 
 nav .container img {
     width: 100px;
     height: 16px;
 }
 
-nav .container ul {
+nav .container .mobile-nav {
     display: flex;
     gap: 20px;
     list-style: none;
 }
 
-nav .container ul a {
+nav .container .mobile-nav a {
     text-decoration: none;
     font-size: 12px;
     color: #000;
     font-weight: 700;
     text-transform: uppercase;
 }
-nav .container svg{
+
+nav .container .menu-icon {
     width: 30px;
     height: 30px;
     display: none;
-}
-
-nav .container ul a:hover{
-    opacity: 30%;
 }
 
 nav .container button {
@@ -60,6 +54,11 @@ nav .container button {
     text-transform: uppercase;
     cursor: pointer;
 }
+
+nav .container ul a:hover{
+    opacity: 30%;
+}
+
 nav .container button:hover{
   background-color: #DFDFDF;
   color: #000;
@@ -703,14 +702,31 @@ width: 60%;
     
 
 @media (max-width:767px) {
-    nav .container ul a,
-    nav .container button{
+     nav .container .mobile-nav {
         display: none;
     }
-    nav .container svg{
-   
-    display: block;
-}
+
+    nav .container .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav .container button {
+        display: none;
+    }
+
+    nav .container .mobile-nav.show {
+        display: flex;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        padding: 20px;
+        gap: 20px;
+    }
+
   .stories .container {
 flex-direction: column-reverse;
     }
