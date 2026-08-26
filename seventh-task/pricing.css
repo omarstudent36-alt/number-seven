@@ -17,33 +17,38 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 20px 30px;
 }
+
+
 
 nav .container img {
     width: 100px;
     height: 16px;
-    
 }
 
-nav .container .mobile-nav {
+nav .container ul {
     display: flex;
     gap: 20px;
     list-style: none;
 }
 
-nav .container .mobile-nav a {
+nav .container ul a {
     text-decoration: none;
     font-size: 12px;
     color: #000;
     font-weight: 700;
     text-transform: uppercase;
 }
-
-nav .container .menu-icon {
+nav .container svg{
     width: 30px;
     height: 30px;
     display: none;
+}
+
+nav .container ul a:hover{
+    opacity: 30%;
 }
 
 nav .container button {
@@ -521,37 +526,15 @@ main .toggle{
 }
 
 @media (max-width:767px) {
-    nav .container .mobile-nav {
+     nav .container ul a,
+    nav .container button{
         display: none;
     }
-
-    nav .container .menu-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-        nav .container button {
-        display: none;
-    }
-
-  nav .container .mobile-nav.show {
-        display: flex;
-        position: absolute;
-        top: 50.5px;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        background-color: white;
-        padding: 20px;
-        gap: 20px;
-        z-index: 1;
-    }
-nav .container img {
-
-    position: relative;
-    z-index: 3;
+    nav .container svg{
+   
+    display: block;
 }
+
 section .container{
     flex-direction: column-reverse;
 }
